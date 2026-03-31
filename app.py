@@ -32,10 +32,16 @@ model_option = st.sidebar.selectbox(
 st.title("📦 Invoice Risk & Freight Prediction")
 
 st.info("""
-This AI-powered app.
+This AI-powered application analyzes invoice data using Machine Learning.
 
-📦 Freight Cost = Shipping cost of goods  
-⚠️ Invoice Risk = Detect suspicious invoices
+📦 **Freight Cost Prediction**  
+Freight cost is the **transportation or shipping charge** required to move goods from a supplier to a warehouse, store, or customer.  
+This model predicts the expected freight cost based on the **invoice value**.
+
+⚠️ **Invoice Risk Prediction**  
+This model analyzes invoice details and predicts whether an invoice may be **flagged for issues** such as unusual quantities, delays, or mismatched values.
+
+Select a model from the **sidebar**, enter the required information, and click **Predict**.
 """)
 
 # ---------------------------
