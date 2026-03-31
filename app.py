@@ -4,7 +4,7 @@ import requests
 # ---------------------------
 # API URL (FastAPI)
 # ---------------------------
-API_URL = "http://fastapi:8000"
+API_URL = "https://predict-fright-cost.onrender.com"
 
 # ---------------------------
 # Sidebar
