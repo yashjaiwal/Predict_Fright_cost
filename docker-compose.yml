@@ -5,19 +5,13 @@ services:
   fastapi:
     build: .
     container_name: fastapi_app
+    command: uvicorn api_app:app --host 0.0.0.0 --port 8000
     ports:
       - "8000:8000"
-    command: uvicorn fastapi_app:app --host 0.0.0.0 --port 8000
-    volumes:
-      - .:/app
 
   streamlit:
     build: .
     container_name: streamlit_app
+    command: streamlit run app.py --server.port 8501 --server.address 0.0.0.0
     ports:
       - "8501:8501"
-    command: streamlit run streamlit_app.py --server.port 8501 --server.address 0.0.0.0
-    depends_on:
-      - fastapi
-    volumes:
-      - .:/app
