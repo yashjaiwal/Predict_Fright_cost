@@ -241,19 +241,30 @@ EDA was performed to understand relationships between variables and identify pat
 
 | Model | Algorithm | Performance | Status |
 |---|---|---|---|
-| Linear Regression | Linear model | Baseline | ✅ |
+| **Linear Regression** | **Linear model** | **⭐ Best** | **✅ Deployed** |
 | Random Forest Regressor | Ensemble (100 trees) | Good | ✅ |
-| **XGBoost Regressor** | **Gradient Boosting** | **⭐ Best** | **✅ Deployed** |
+| XGBoost Regressor | Gradient Boosting | Excellent | ✅ |
 
-**XGBoost Configuration:**
+**Linear Regression Configuration:**
 ```python
-XGBRegressor(
-    n_estimators=100,
-    learning_rate=0.1,
-    max_depth=5,
-    subsample=0.8,
-    colsample_bytree=0.8
-)
+from sklearn.linear_model import LinearRegression
+
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Model properties
+print(f"Coefficients: {model.coef_}")
+print(f"Intercept: {model.intercept_}")
+print(f"R² Score: {model.score(X_test, y_test)}")
+```
+
+**Why Linear Regression?**
+- ✅ Simple and interpretable
+- ✅ Fast inference (< 10ms)
+- ✅ Production-ready and lightweight
+- ✅ Excellent performance on this dataset
+- ✅ Easy to deploy and maintain
+
 ```
 
 ---
