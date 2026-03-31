@@ -778,7 +778,7 @@ This project is open source and available under the MIT License.
 ## 👤 Author & Contact
 
 **Yash Jaiswal**  
-*AI | ML Enthusiast | Data Scientist*
+*AI | ML Enthusiast*
 
 ### Connect With Me
 
