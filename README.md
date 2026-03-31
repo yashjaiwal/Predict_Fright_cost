@@ -587,21 +587,14 @@ POST /predict/freight_cost
 Content-Type: application/json
 
 {
-  "invoice_quantity": 100,
-  "invoice_dollar_amount": 5000,
-  "days_from_po_to_invoice": 15,
-  "total_item_quantity": 500,
-  "total_item_dollar_value": 10000,
-  "average_receiving_delay": 2.5
+  "invoice_quantity": 100
 }
 ```
 
 Response:
 ```json
 {
-  "predicted_freight_cost": 245.50,
-  "confidence_interval": [230.30, 260.70],
-  "model_version": "1.0.0"
+  "predicted_freight_cost": 50.2
 }
 ```
 
@@ -611,22 +604,20 @@ POST /predict/invoice_flag
 Content-Type: application/json
 
 {
-  "invoice_quantity": 100,
-  "invoice_dollar_amount": 5000,
-  "days_from_po_to_invoice": 15,
-  "total_item_quantity": 500,
-  "total_item_dollar_value": 10000,
-  "average_receiving_delay": 2.5
+  "invioce_quantity": 10,
+  "invoice_dollar": 200,
+  "Freight": 230,
+  "total_item_quantity": 230,
+  "total_item_dollars": 340,
+  "avg_receiving_delay": 450
 }
 ```
 
 Response:
 ```json
 {
-  "is_flagged": false,
-  "risk_score": 0.15,
-  "recommendation": "Normal - No review required",
-  "model_version": "1.0.0"
+  "invoice_flag": 1,
+  "message": "⚠️ Likely Flagged"
 }
 ```
 
