@@ -211,11 +211,6 @@ The following preprocessing steps were applied:
 - ✅ **Train-Test Split:** 80/20 split for model validation
 - ✅ **Data Validation:** Quality checks on all processed data
 
-**Data Quality Metrics:**
-- Records processed: 1,000+
-- Features engineered: 7 core + derived
-- Missing values: < 1%
-- Outliers detected & handled: ✅
 
 ---
 
